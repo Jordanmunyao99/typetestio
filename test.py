@@ -490,10 +490,10 @@ def main():
     print("\nStarting to type...\n")
     print("="*50)
     start_time = time.time()
-    
-    # Type continuously for 65 seconds, fetching words dynamically
+    # Type continuously for 5 minutes with 5 minute buffer, fetching words dynamically
+    TIME_DURATION = 305  
     try:
-        word_count, char_count = type_continuously_dynamic(input_box, duration=65)
+        word_count, char_count = type_continuously_dynamic(input_box, duration=TIME_DURATION)
     except Exception as e:
         print(f"\nError during typing: {e}")
         import traceback
